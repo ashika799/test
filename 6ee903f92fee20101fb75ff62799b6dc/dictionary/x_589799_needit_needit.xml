@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element audit="true" extends="task" label="NeedIt" max_length="40" name="x_589799_needit_needit" sizeclass="4" type="collection">
+    <element audit="true" extends="task" label="NeedIt" max_length="40" name="x_589799_needit_needit" sizeclass="15" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Name" max_length="40" name="name" type="string"/>
         <element label="Newfield" max_length="40" name="new_field2" type="integer"/>
-        <element label="new_field2" max_length="40" name="new_field_2" type="integer"/>
+        <element choice="1" label="What needed" max_length="40" name="new_field_2" type="integer">
+            <choice>
+                <element inactive_on_update="false" label="Human Resources" sequence="0" value="1"/>
+                <element inactive_on_update="false" label="Facilities" sequence="1" value="2"/>
+                <element inactive_on_update="false" label="Legal" sequence="2" value="3"/>
+                <element inactive_on_update="false" label="other" sequence="3" value="4"/>
+                <element inactive_on_update="false" label="other2" sequence="4" value="5"/>
+                <element inactive_on_update="false" label="legal1" sequence="5" value="6"/>
+                <element inactive_on_update="false" label="legal2" sequence="6" value="7"/>
+            </choice>
+        </element>
         <element attributes="edge_encryption_enabled=true" choice="1" label="New Choice" max_length="40" name="u_choice_3" type="string">
             <choice>
                 <element inactive_on_update="false" label="Choice 1" sequence="0" value="Choice 1"/>
